@@ -19,6 +19,9 @@ const SignIn = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
+    if (user) {
+        navigate('/home')
+    }
 
     const handleNavigateToSignUp = () => {
         navigate('/signUp')

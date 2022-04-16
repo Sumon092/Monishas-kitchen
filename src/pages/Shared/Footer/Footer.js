@@ -5,8 +5,8 @@ const Footer = () => {
     const year = date.getFullYear();
     return (
 
-        <div>
-            <p><small>All Rights Reserved &copy; Monsha's Kitchen {year} </small></p>
+        <div className='bg-dark text-white text-center ' style={{ height: '60px' }}>
+            <p className='align-items-center'><small>All Rights Reserved &copy; Monsha's Kitchen {year} </small></p>
         </div>
     );
 };

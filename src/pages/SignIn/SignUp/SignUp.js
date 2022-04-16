@@ -17,13 +17,13 @@ const SignUp = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
-    const navigateToLogin = () => {
+    const navigateToSignIn = () => {
         navigate('/login');
     }
     if (user) {
-        console.log('user', user)
+        navigate('/home')
     }
-    const handleRegister = async (event) => {
+    const handleSignUp = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
@@ -40,11 +40,11 @@ const SignUp = () => {
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='display-1 fw-bolder text-center'>Sign Up</h2>
-            <p className='fs-4 text-center'>Already have an account ? <Link to='/signIn' className='text-decoration-none' onClick={navigateToLogin} >Login</Link></p>
-            <Form onSubmit={handleRegister}>
+            <p className='fs-4 text-center'>Already have an account ? <Link to='/signIn' className='text-decoration-none' onClick={navigateToSignIn} >Sing In</Link></p>
+            <Form onSubmit={handleSignUp}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name="email" placeholder="Enter email" />
+                    <Form.Control type="email" name="email" placeholder="Enter email" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Your Name</Form.Label>
@@ -53,15 +53,15 @@ const SignUp = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name="password" placeholder="Password" />
+                    <Form.Control type="password" name="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" onClick={() => setAgree(!agree)} label="Accept terms and condition" className={`ps-2 ${agree ? '' : 'text-danger'}`} />
                 </Form.Group>
                 <button
                     disabled={!agree}
-                    className='w-50 mx-auto d-block mb-3' variant="primary" type="submit">
-                    Register
+                    className='w-50 mx-auto d-block mb-3 btn btn btn-outline-primary rounded-pill fs-16' variant="primary" type="submit">
+                    Sign Up
                 </button>
             </Form>
 
