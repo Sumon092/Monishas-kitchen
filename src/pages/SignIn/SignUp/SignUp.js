@@ -1,7 +1,7 @@
 import { Button } from 'bootstrap';
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
@@ -14,9 +14,6 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [agree, setAgree] = useState(false);
-
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
     const navigate = useNavigate();
     const navigateToSignIn = () => {
         navigate('/login');
@@ -29,38 +26,35 @@ const SignUp = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-
-
         await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
         navigate('/home')
 
 
     }
     return (
-        <div className='container w-50 mx-auto'>
+        <div className='container w-50 mx-auto h-100'>
             <h2 className='display-1 fw-bolder text-center'>Sign Up</h2>
             <p className='fs-4 text-center'>Already have an account ? <Link to='/signIn' className='text-decoration-none' onClick={navigateToSignIn} >Sing In</Link></p>
             <div className='d-flex justify-content-center align-items-center'>
                 <div className='me-5 w-50'>
                     <Form onSubmit={handleSignUp}>
 
-                        <Form.Group className="mb-3" controlId="formBasicName">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control type="text" name="name" placeholder="Enter your name" />
+                        <Form.Group className="mb-1" controlId="formBasicName">
+                            <Form.Label className='ms-0'>Name</Form.Label>
+                            <Form.Control type="text" name="name" placeholder="" />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-1" controlId="formBasicEmail">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" name="email" placeholder="Enter email" required />
+                            <Form.Control type="email" name="email" placeholder="" required />
                         </Form.Group>
 
-                        <Form.Group className="mb-3 border-radius-" controlId="formBasicPassword">
+                        <Form.Group className="mb-1 border-radius-" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" name="password" placeholder="Password" required />
+                            <Form.Control type="password" name="password" placeholder="" required />
                         </Form.Group>
-                        <Form.Group className="mb-3 border-radius-" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" name="password" placeholder="Password" required />
+                        <Form.Group className="mb-1 border-radius-" controlId="formBasicPassword">
+                            <Form.Label>Confire Password</Form.Label>
+                            <Form.Control type="password" name="Confirm-password" placeholder="" required />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" onClick={() => setAgree(!agree)} label="Accept terms and condition" className={`ps-2 ${agree ? '' : 'text-danger'}`} />
