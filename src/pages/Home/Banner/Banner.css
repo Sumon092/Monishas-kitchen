@@ -15,7 +15,6 @@
     height: 590px;
     border-radius: 50%;
     z-index: 2;
-    content: '\F160D';
 }
 
 .banner-text-bottom {
@@ -57,7 +56,10 @@
 
 .tips-button {
     border: none;
+    background-color: #06113C;
     width: 250px;
+    color: #FFFFFF;
+    font-weight: bold;
     margin-right: 50px;
     border-radius: 5px;
     padding: 15px 15px;
@@ -67,4 +69,18 @@
 .tips-button:hover {
     background-color: #FF8C32;
     color: #FFFFFF;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-image img {
+        width: 400px;
+        height: 390px;
+        border-radius: 50%;
+        z-index: 2;
+    }
 }
