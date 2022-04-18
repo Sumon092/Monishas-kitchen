@@ -1,0 +1,70 @@
+.banner {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-top: 50px;
+}
+
+.text-golden {
+    color: #FF8C32;
+}
+
+.banner-image img {
+    width: 600px;
+    height: 590px;
+    border-radius: 50%;
+    z-index: 2;
+    content: '\F160D';
+}
+
+.banner-text-bottom {
+    background-color: #F3F3F3;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 800;
+    margin-bottom: -15px;
+}
+
+.banner-button button {
+    border: none;
+    background-color: #FF8C32;
+    padding: 10px;
+    padding-right: 15px;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: -100px;
+    margin-left: 25px;
+}
+
+.tips-section {
+    margin-top: 15px;
+}
+
+.tips-section input {
+    background-color: #F3F3F3;
+    border: none;
+    width: 95%;
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.tips-button {
+    border: none;
+    width: 250px;
+    margin-right: 50px;
+    border-radius: 5px;
+    padding: 15px 15px;
+    font-weight: bold;
+}
+
+.tips-button:hover {
+    background-color: #FF8C32;
+    color: #FFFFFF;
+}
