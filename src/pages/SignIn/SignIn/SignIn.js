@@ -22,8 +22,9 @@ const SignIn = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
+    let from = location?.state?.from?.pathname || "/checkout";
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true });
     }
 
     const handleNavigateToSignUp = () => {

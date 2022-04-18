@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Service from './pages/Home/Service/Service';
 import Services from './pages/Home/Services/Services';
 import Checkout from './pages/Checkout/Checkout';
+import RequiredAuth from './pages/SignIn/RequiredAuth/RequiredAuth';
 
 function App() {
   return (
@@ -22,9 +23,13 @@ function App() {
         <Route path='/about' element={<About />}></Route>
         <Route path='/signIn' element={<SignIn />}></Route>
         <Route path='/signUp' element={<SignUp />}></Route>
-        <Route path='/checkout' element={<Checkout />}></Route>
+        <Route path='/checkout' element={
+          <RequiredAuth>
+            <Checkout />
+          </RequiredAuth>
+        }></Route>
         <Route path='/services' element={<Services />}></Route>
-        <Route path='/service' element={<Service />}></Route>
+        <Route path='/service/:serviceId' element={<Service />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
