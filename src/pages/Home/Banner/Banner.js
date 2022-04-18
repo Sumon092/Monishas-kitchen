@@ -11,9 +11,9 @@ const Banner = () => {
                     <p className='text-golden'>Diet and Clean food Catering</p>
                     <h2 className='display-2 fw-bolder'>Diet Is <span className='text-golden display-2 fw-bolder'>Now Easy</span></h2>
                     <h2 className='display-2 fw-bolder'>With My Catering</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur distinctio earum sequi fugit veniam excepturi nobis sunt, impedit assumenda. Veritatis!</p>
+                    <p>I have made organic made for you and your family .you can order my catering service from online or physically</p>
                     <div className='banner-text-bottom'>
-                        <p className='text-muted'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur architecto, quam vero aperiam blanditiis itaque nemo nulla, recusandae sapiente accusamus unde quo deserunt totam veniam mollitia enim libero. Aliquam, iure.</p>
+                        <p className='text-muted'>To improve your health condition  you can consult to me.I will give you consultancy for your health</p>
                     </div>
                     <div className='banner-button'>
                         <button>Take A Tour</button>

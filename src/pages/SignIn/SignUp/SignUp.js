@@ -16,7 +16,7 @@ const SignUp = () => {
     const [agree, setAgree] = useState(false);
     const navigate = useNavigate();
     const navigateToSignIn = () => {
-        navigate('/login');
+        navigate('/signIn');
     }
     if (user) {
         navigate('/home')
@@ -26,10 +26,12 @@ const SignUp = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
+        const confirmPassword = event.target.confirmPassword.value;
         await createUserWithEmailAndPassword(email, password);
         navigate('/home')
-
-
+        if (password !== confirmPassword) {
+            return;
+        }
     }
     return (
         <div className='container w-50 mx-auto h-100'>
@@ -53,9 +55,10 @@ const SignUp = () => {
                             <Form.Control type="password" name="password" placeholder="" required />
                         </Form.Group>
                         <Form.Group className="mb-1 border-radius-" controlId="formBasicPassword">
-                            <Form.Label>Confire Password</Form.Label>
-                            <Form.Control type="password" name="Confirm-password" placeholder="" required />
+                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Control type="password" name="confirmPassword" placeholder="" required />
                         </Form.Group>
+                        {error}
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" onClick={() => setAgree(!agree)} label="Accept terms and condition" className={`ps-2 ${agree ? '' : 'text-danger'}`} />
                         </Form.Group>

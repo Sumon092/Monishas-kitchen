@@ -63,6 +63,9 @@ const SignIn = () => {
                         <Form.Group className="mb-2" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" name="password" placeholder="Password" />
+                            {
+                                error
+                            }
                         </Form.Group>
                         <p>Forgot Password ? <button onClick={handleResetPassword} className='text-decoration-none btn btn-link'  >Reset Password</button></p>
                         <button className='w-50 mx-auto d-block mb-2 btn btn btn-outline-primary rounded-pill fs-16' variant="primary" type="submit">
