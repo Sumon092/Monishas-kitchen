@@ -29,7 +29,7 @@ function App() {
           </RequiredAuth>
         }></Route>
         <Route path='/services' element={<Services />}></Route>
-        <Route path='/service/:serviceId' element={<Service />}></Route>
+        <Route path='/service' element={<Service />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>

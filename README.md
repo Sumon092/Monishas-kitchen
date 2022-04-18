@@ -1,7 +1,22 @@
 # Getting Started with Create React App
+###Project Name : Monisha's Kitchen
+T [Monisha's Kitchen](https://monisha-s-kitchen.web.app/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+<h2>Project details</h2>
+<ul>
+    <li>Home delivery service</li>
+    <li>Monthly Package</li>
+    <li>Diet Consultancy</li>
+    <li>Fresh Foods</li>
+    <li>Organic Resources</li>
+</ul>
+<h3>Technologies used</h3>
+<ul>
+    <li>React</li>
+    <li>Bootstrap</li>
+    <li>Firebase</li>
+    <li>Css</li>
+</ul>
 ## Available Scripts
 
 In the project directory, you can run:
