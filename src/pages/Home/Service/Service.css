@@ -1,0 +1,10 @@
+.service {
+    max-width: 400px;
+    padding: 10px;
+    margin-right: 5px;
+
+}
+
+.service img {
+    width: 380px;
+}

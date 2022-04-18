@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "img": "https://i.ibb.co/x1qv4xb/ryna-studio-kubqv-Bb-Za44-unsplash.jpg",
+        "name": "Clean and healthy food catering (Weekly)",
+        "price": "300",
+        "description": "I provide healthy and clean food thats are delicious and also healthy which make sure your healthy family"
+    },
+    {
+        "id": "2",
+        "img": "https://i.ibb.co/k9dhL4n/asiya-kiev-Siwrp-Bnx-Dww-unsplash.jpg",
+        "name": "Diet and catering membership (monthly)",
+        "price": "400",
+        "description": "A healthy food package for your family which I will serve whole month"
+    },
+    {
+        "id": "3",
+        "img": "https://i.ibb.co/KGrVVWk/four-smiling-business-people-buffet-table.jpg",
+        "name": "Healthy food and diet consultancy",
+        "price": "100",
+        "description": "Which foods are good for your health and which bad for you I will consult this.Also I will provide  diet chart for you"
+    }
+]
