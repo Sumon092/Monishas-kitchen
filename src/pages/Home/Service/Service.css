@@ -1,22 +1,20 @@
 .service-detail {
-    width: 400px;
-    padding: 10px;
-    margin-right: 5px;
+    width: 405px;
     border: 5 px solid gray;
-
+    text-align: center;
 }
 
 .single-service {
-    width: 410px;
-    height: 514px;
+    width: 405px;
+    height: 525px;
     border: 1px solid gray;
     border-radius: 5px;
     box-shadow: 10px 10px 50px gray;
-    padding: 10px;
 }
 
-.service-detail img {
+.service-detail .single-service img {
     width: 400px;
     padding: 10px;
     border-radius: 10px;
+    margin-right: 10px;
 }

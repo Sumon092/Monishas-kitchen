@@ -34,7 +34,7 @@ const SignUp = () => {
         }
     }
     return (
-        <div className='container w-50 mx-auto h-100'>
+        <div className='container w-50 mx-auto h-100' style={{ height: "90vh" }}>
             <h2 className='display-1 fw-bolder text-center'>Sign Up</h2>
             <p className='fs-4 text-center'>Already have an account ? <Link to='/signIn' className='text-decoration-none' onClick={navigateToSignIn} >Sing In</Link></p>
             <div className='d-flex justify-content-center align-items-center'>

@@ -1,0 +1,65 @@
+.why-me-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    grid-gap: 15px;
+}
+
+.why-me-left img {
+    border-radius: 10px;
+    width: 400px;
+}
+
+.whyme-left-top {
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+}
+
+.whyme-left-top .detail {
+    width: 150px;
+    box-sizing: content-box;
+
+}
+
+.whyme-left-bottom {
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 200px;
+}
+
+@media only screen and (max-width:600px) {
+    .why-me-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .whyme-left-top {
+        position: absolute;
+        overflow: auto;
+        z-index: 1;
+    }
+
+    .whyme-left-bottom {
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .why-me-left {
+        margin-bottom: 280px;
+    }
+
+    .client-text {
+        width: 100px;
+    }
+
+    .why-me-left img {
+        width: 250px;
+    }
+
+    .why-me-right img {
+        width: 250px;
+    }
+}

@@ -49,7 +49,7 @@ const SignIn = () => {
         }
     }
     return (
-        <div className='w-50 mx-auto container h-100'>
+        <div className='w-50 mx-auto container' style={{ height: "85vh" }}>
             <h2 className='display-1 fw-bolder text-center'>Sign In</h2>
             <p onClick={handleNavigateToSignUp} className='fs-4 text-center'>Don't have account ? <button className='btn btn-link text-decoration-none fs-4'>Sign up</button></p>
             <div className='d-flex justify-content-center align-items-center'>
@@ -63,9 +63,11 @@ const SignIn = () => {
                         <Form.Group className="mb-2" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" name="password" placeholder="Password" />
-                            {
-                                error
-                            }
+                            <p className='text-danger'>
+                                {
+                                    error ? error.message : ''
+                                }
+                            </p>
                         </Form.Group>
                         <p>Forgot Password ? <button onClick={handleResetPassword} className='text-decoration-none btn btn-link'  >Reset Password</button></p>
                         <button className='w-50 mx-auto d-block mb-2 btn btn btn-outline-primary rounded-pill fs-16' variant="primary" type="submit">

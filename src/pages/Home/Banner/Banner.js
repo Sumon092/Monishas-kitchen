@@ -31,7 +31,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className='banner-image '>
-                    <img className='img-fluid' src={Banner1} alt="" />
+                    <img className='img-fluid' src="https://i.ibb.co/qgKpK4r/rachel-park-hrlvr2-Zl-UNk-unsplash.jpg" alt="" />
                 </div>
             </div>
 

@@ -20,10 +20,10 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="home#services">My Services</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link href="home#whyme">Why Me</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/about">Blogs</Nav.Link>
+                            <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             {
                                 user ? <Button onClick={handleSignOut} className="text-decoration-none text-primary text-center bg-dark border-0 text-white" >Sign out</Button> :

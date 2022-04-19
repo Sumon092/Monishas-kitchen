@@ -8,11 +8,13 @@ const Service = ({ service }) => {
     return (
         <div className='service-detail col'>
             <div className='single-service'>
-                <img src={img} alt="" />
-                <h3>{name}</h3>
-                <h4>Price:$ {price}</h4>
-                <p><small className='text-muted'>{description}</small></p>
-                <button className='w-100 tips-button'><Link className='text-decoratio' to={'/checkout'}>Book Now</Link></button>
+                <img className='ms-1' src={img} alt="" />
+                <div className="single-service-detail p-3">
+                    <h3 className='mt-0'>{name}</h3>
+                    <h4>Price:$ {price}</h4>
+                    <p><small className='text-muted'>{description}</small></p>
+                </div>
+                <button className='w-100 tips-button'><Link className='text-decoration-none text-white' to={'/checkout'}>Book Now</Link></button>
             </div>
 
         </div>

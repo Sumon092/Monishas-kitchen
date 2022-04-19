@@ -13,6 +13,7 @@ import Services from './pages/Home/Services/Services';
 import Checkout from './pages/Checkout/Checkout';
 import RequiredAuth from './pages/SignIn/RequiredAuth/RequiredAuth';
 import Blogs from './pages/Blogs/Blogs';
+import WhyMe from './pages/Home/WhyMe/WhyMe';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/about' element={<About />}></Route>
         <Route path='/signIn' element={<SignIn />}></Route>
         <Route path='/signUp' element={<SignUp />}></Route>
+        <Route path='/whyme' element={<WhyMe></WhyMe>}></Route>
         <Route path='/checkout' element={
           <RequiredAuth>
             <Checkout />
