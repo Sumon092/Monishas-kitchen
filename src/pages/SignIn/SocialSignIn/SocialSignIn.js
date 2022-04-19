@@ -4,10 +4,17 @@ import auth from '../../../firebase.init';
 import './SocialSignIn.css';
 import GoogleLogo from '../../../images/Logo/google.png'
 import FacebookLogo from '../../../images/Logo/facebook.png'
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 const SocialSignIn = () => {
     // const [error, setError] = useState('')
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const location = useLocation();
+    const navigate = useNavigate();
+    let from = location?.state?.from?.pathname || "/";
+    if (user) {
+        navigate(from, { replace: true });
+    }
     let errorElement;
     if (error)
         errorElement = <p className='text-danger'>Error:{error?.message}</p>

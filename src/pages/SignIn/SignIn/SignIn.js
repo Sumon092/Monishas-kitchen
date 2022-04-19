@@ -22,7 +22,7 @@ const SignIn = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location?.state?.from?.pathname || "/checkout";
+    let from = location?.state?.from?.pathname || "/";
     if (user) {
         navigate(from, { replace: true });
     }
@@ -57,12 +57,12 @@ const SignIn = () => {
                     <Form onSubmit={handleSubmitSignIn}>
                         <Form.Group className="mb-2" controlId="formBasicEmail">
                             <Form.Label className='text-start'>Email</Form.Label>
-                            <Form.Control ref={emailRef} type="email" name='email' placeholder="Enter email" />
+                            <Form.Control ref={emailRef} type="email" name='email' placeholder="Enter email" required />
                         </Form.Group>
 
                         <Form.Group className="mb-2" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" name="password" placeholder="Password" />
+                            <Form.Control type="password" name="password" placeholder="Password" required />
                             <p className='text-danger'>
                                 {
                                     error ? error.message : ''
