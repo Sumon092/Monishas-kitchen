@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
@@ -14,6 +14,7 @@ import Checkout from './pages/Checkout/Checkout';
 import RequiredAuth from './pages/SignIn/RequiredAuth/RequiredAuth';
 import Blogs from './pages/Blogs/Blogs';
 import WhyMe from './pages/Home/WhyMe/WhyMe';
+import CheckoutDetail from './pages/CheckoutDetail/CheckoutDetail';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/signUp' element={<SignUp />}></Route>
         <Route path='/whyme' element={<WhyMe></WhyMe>}></Route>
         <Route path='/checkout' element={
+          //required auth for private or protected route.
           <RequiredAuth>
             <Checkout />
           </RequiredAuth>
@@ -34,6 +36,7 @@ function App() {
         <Route path='/services' element={<Services />}></Route>
         <Route path='/service' element={<Service />}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/checkoutdetail' element={<CheckoutDetail />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>

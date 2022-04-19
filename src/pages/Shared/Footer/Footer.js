@@ -6,7 +6,7 @@ const Footer = () => {
     const year = date.getFullYear();
     return (
 
-        <footer className='bg-dark text-white text-center mt-2 footer-height' style={{ height: '60px' }}>
+        <footer className='footer text-white text-center mt-2 footer-height' style={{ height: '60px' }}>
             <p className='align-items-center'><small>All Rights Reserved &copy; Monsha's Kitchen {year} </small></p>
         </footer>
     );
